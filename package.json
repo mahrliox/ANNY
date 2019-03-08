@@ -1,14 +1,13 @@
 {
-  "name": "anny-devv",
+  "name": "anny",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -54,5 +53,6 @@
   "engines": {
     "node": "11.7.0",
     "npm": "6.5.0"
-  }
+  },
+  "heroku-run-build-script": true
 }
