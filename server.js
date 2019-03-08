@@ -9,9 +9,9 @@ app.use(bodyParser.json()); //se le dice a express q usaremos body-parser con js
 app.use(bodyParser.urlencoded({extended: true}));
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/ANNY'));
-app.get('/*', function(req,res) {
-    res.sendFile(path.join(__dirname+'/dist/ANNY/index.html'));
-});
+//app.get('/', function(req,res) {
+  //  res.sendFile(path.join(__dirname+'/dist/ANNY/index.html'));
+//});
 
 //Rutas
 app.get('/login',function(req, res){
