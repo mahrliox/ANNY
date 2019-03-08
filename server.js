@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express(); //se inicializa el framework express
 
-pp.use(bodyParser.json()); //se le dice a express q usaremos body-parser con json
+app.use(bodyParser.json()); //se le dice a express q usaremos body-parser con json
 app.use(bodyParser.urlencoded({extended: true}));
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/ANNY'));
