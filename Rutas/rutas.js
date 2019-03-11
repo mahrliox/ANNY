@@ -13,7 +13,12 @@ exports.paginaLogin = function(req, res){
         POST: Autenticacion de tienda
     @Autor: Mario Humberto Ramirez Lio
     @Descripcion: Insercion de tiendas para autentificarlos
-                  en el sistema mediante POST
+                  en el sistema mediante POST.
+                  POST SCHEMA:
+                  {
+                      "email": <string>
+                      "password: <string>"
+                  }
 */
 exports.autenticarce = function(req, res){
 
@@ -36,6 +41,32 @@ exports.paginaRegistro = function(req, res){
     @Autor: Mario Humberto Ramirez Lio
     @Descripcion: Registro de tiendas en la plataforma
                   utilizando el metodo POST
+                  POST SCHEMA:
+                  {
+                      "Nombre Tienda": <string>
+                      "Email": <string>
+                      "Telefono": <int>
+                      "Direccion": {
+                          "Calle":<string>
+                          "Numero exterior": <int>
+                          "Numero interior": <int>
+                          "Colonia": <string>
+                          "Ciudad": <string>
+                          "Estado": <string>
+                          "CP": <int>
+                          "Pais": <int>
+                      }
+                      "Direccion Facturacion": {
+                          "fCalle":<string>
+                          "fNumero exterior": <int>
+                          "fNumero interior": <int>
+                          "fColonia": <string>
+                          "fCiudad": <string>
+                          "fEstado": <string>
+                          "fCP": <int>
+                          "fPais": <int>
+                      }
+                  }
 */
 exports.registrarse = function(req, res){
     
