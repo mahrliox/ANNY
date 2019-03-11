@@ -47,7 +47,8 @@ exports.paginaRegistro = function(req, res){
                       "Email": <string>
                       "Telefono": <int>
                       "Direccion": {
-                          "Calle":<string>
+                          "Calle": <string>
+                          "Referencia": <string>
                           "Numero exterior": <int>
                           "Numero interior": <int>
                           "Colonia": <string>
@@ -58,6 +59,7 @@ exports.paginaRegistro = function(req, res){
                       }
                       "Direccion Facturacion": {
                           "fCalle":<string>
+                          "fReferencia": <string>
                           "fNumero exterior": <int>
                           "fNumero interior": <int>
                           "fColonia": <string>

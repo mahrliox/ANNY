@@ -1,3 +1,184 @@
-<p>
-  login-view works!
-</p>
+<div class="container">
+  <div class="card">
+    <div class="card-body" *ngIf = "muestraLogin==true">
+      <h3>Iniciar sesión</h3>
+      <form>
+        <div class="form-group">
+          <label for="Iemail">Email address</label>
+          <input type="email" class="form-control" id="Iemail" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su email con nadie.</small>
+        </div>
+        <div class="form-group">
+          <label for="Ipassword">Password</label>
+          <input type="password" class="form-control" id="Ipassword" placeholder="Password">
+        </div> 
+      </form>
+      <button class="btn btn-primary">LogIn</button>
+      <small id="emailHelp" class="form-text text-muted">
+          <a href="#" (click)="showRegisterForm()">¿Aún no tiene una cuenta? Registrese aqui</a>
+        </small>
+    </div><!-- card-body-->
+    <div class="card-body" *ngIf = "muestraRegistro==true"><!--Form de registro-->
+      <h3>Registrarse en ANNY</h3>
+      <form>
+        <div class="form-group">
+          <label for="nombreTienda">Nombre del Establecimiento</label>
+          <input type="text" class="form-control" id="nombreTienda" placeholder="Nombre del Establecimiento">
+        </div>
+        <div class="form-group">
+          <label for="emailRegistro">Email</label>
+          <input type="email" class="form-control" id="emailRegistro" aria-describedby="emailHelp" placeholder="Email">
+          <small id="emailAyuda" class="form-text text-muted">Este email será su nombre de usuario para entrar a la plataforma</small>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Numero de Telefono</label>
+          <input type="number" class="form-control" id="telefono" placeholder="Numero de Telefono">
+        </div>
+        <div class="form-group">
+          <h5>Dirección</h5>
+          <label for="calle">Calle</label>
+          <input type="text" class="form-control" id="calle" placeholder="Calle">
+        </div>
+        <div class="form-group">
+          <label for="depto">Departamento, unidad, referencia</label>
+          <textarea type="text" class="form-control" id="depto" placeholder="Departamento, unidad,referencia" rows="3"></textarea>
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="nInterior">Número Interior</label>
+            <input type="number" class="form-control" id="nInterior" placeholder="No. Interior">
+          </div>
+          <div class="col-6">
+            <label for="nExterior">Número Exterior</label>
+            <input type="number" class="form-control" id="nExterior" placeholder="No. Exterior">
+          </div> 
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="cp">C.P.</label>
+            <input type="number" class="form-control" id="cp" placeholder="C.P.">
+          </div>
+          <div class="col-6">
+            <label for="colonia">Colonia</label>
+            <input type="text" class="form-control" id="colonia" placeholder="Colonia">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="estado">Estado</label>
+            <select class="form-control" id="estado">
+              <option value="">Seleccione un Estado</option>
+              <option value="">Aguascalientes</option>
+              <option value="">Baja California</option>
+              <option value="">Baja California Sur</option>
+              <option value="">Campeche</option>
+              <option value="">Chihuahua</option>
+              <option value="">Chiapas</option>
+              <option value="">Coahuila</option>
+              <option value="">Colima</option>
+              <option value="">Durango</option>
+              <option value="">Guanajuato</option>
+              <option value="">Guerrero</option>
+              <option value="">Hidalgo</option>
+              <option value="">Jalisco</option>
+              <option value="">México</option>
+              <option value="">Michoacán</option>
+              <option value="">Morelos</option>
+              <option value="">Nayarit</option>
+              <option value="">Nuevo León</option>
+              <option value="">Oaxaca</option>
+              <option value="">Puebla</option>
+              <option value="">Querétaro</option>
+              <option value="">Quintana Roo</option>
+              <option value="">San Luis Potosí</option>
+              <option value="">Sinaloa</option>
+              <option value="">Sonora</option>
+              <option value="">Tabasco</option>
+              <option value="">Tamaulipas</option>
+              <option value="">Tlaxcala</option>
+              <option value="">Veracruz</option>
+              <option value="">Yucatán</option>
+              <option value="">Zacatecas</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="pais">Pais</label>
+            <input type="text" class="form-control" id="pais" placeholder="Pais">
+          </div>
+        </div><!--Direccion-->
+        <div class="form-group">
+          <h5>Dirección de Facturacion</h5>
+          <label for="fcalle">Calle</label>
+          <input type="text" class="form-control" id="fcalle" placeholder="Calle">
+        </div>
+        <div class="form-group">
+          <label for="fdepto">Departamento, unidad, referencia</label>
+          <textarea type="text" class="form-control" id="fdepto" placeholder="Departamento, unidad,referencia" rows="3"></textarea>
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="fnInterior">Número Interior</label>
+            <input type="number" class="form-control" id="fnInterior" placeholder="No. Interior">
+          </div>
+          <div class="col-6">
+            <label for="fnExterior">Número Exterior</label>
+            <input type="number" class="form-control" id="fnExterior" placeholder="No. Exterior">
+          </div> 
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="fcp">C.P.</label>
+            <input type="number" class="form-control" id="fcp" placeholder="C.P.">
+          </div>
+          <div class="col-6">
+            <label for="fcolonia">Colonia</label>
+            <input type="text" class="form-control" id="fcolonia" placeholder="Colonia">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-6">
+            <label for="festado">Estado</label>
+            <select class="form-control" id="festado">
+                <option value="">Seleccione un Estado</option>
+                <option value="">Aguascalientes</option>
+                <option value="">Baja California</option>
+                <option value="">Baja California Sur</option>
+                <option value="">Campeche</option>
+                <option value="">Chihuahua</option>
+                <option value="">Chiapas</option>
+                <option value="">Coahuila</option>
+                <option value="">Colima</option>
+                <option value="">Durango</option>
+                <option value="">Guanajuato</option>
+                <option value="">Guerrero</option>
+                <option value="">Hidalgo</option>
+                <option value="">Jalisco</option>
+                <option value="">México</option>
+                <option value="">Michoacán</option>
+                <option value="">Morelos</option>
+                <option value="">Nayarit</option>
+                <option value="">Nuevo León</option>
+                <option value="">Oaxaca</option>
+                <option value="">Puebla</option>
+                <option value="">Querétaro</option>
+                <option value="">Quintana Roo</option>
+                <option value="">San Luis Potosí</option>
+                <option value="">Sinaloa</option>
+                <option value="">Sonora</option>
+                <option value="">Tabasco</option>
+                <option value="">Tamaulipas</option>
+                <option value="">Tlaxcala</option>
+                <option value="">Veracruz</option>
+                <option value="">Yucatán</option>
+                <option value="">Zacatecas</option>
+              </select>
+          </div>
+          <div class="col-6">
+            <label for="fpais">Pais</label>
+            <input type="text" class="form-control" id="fpais" placeholder="Pais">
+          </div>
+        </div>
+      </form>
+    </div><!--Form de registro-->
+  </div><!--card-->
+</div>

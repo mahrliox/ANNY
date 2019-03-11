@@ -8,9 +8,13 @@ import { LoginService} from '../login.service'; // se importa el servicio login.
   styleUrls: ['./login-view.component.css']
 })
 export class LoginViewComponent implements OnInit {
-
+  muestraLogin = true;
+  muestraRegistro = false;
   constructor() { }
-
+  showRegisterForm() {
+    this.muestraLogin = false;
+    this.muestraRegistro = true;
+  }
   ngOnInit() {
   }
 
