@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="card container">
+  <div class="card">
     <div class="card-body" *ngIf = "muestraLogin==true">
       <h3>Iniciar sesión</h3>
       <form>
@@ -18,7 +18,7 @@
           <a href="#" (click)="showRegisterForm()">¿Aún no tiene una cuenta? Registrese aqui</a>
         </small>
     </div><!-- card-body-->
-    <div class="card-body container" *ngIf = "muestraRegistro==true"><!--Form de registro-->
+    <div class="card-body" *ngIf = "muestraRegistro==true"><!--Form de registro-->
       <h3>Registrarse en ANNY</h3>
       <form>
         <div class="form-group">
@@ -177,16 +177,19 @@
             <label for="fpais">Pais</label>
             <input type="text" class="form-control" id="fpais" placeholder="Pais">
           </div>
+          
         </div>
+        
       </form>
-      <div class="col-md-4 offset-md-8 col-lg-3 offset-lg-9 col-sm-5 offset-sm-7 col-8 offset-3 row">
-        <div class="col-7">
-          <button class="btn btn-primary">Guadar</button>
-        </div>
-        <div class="col-5">
+      <div class="col-md-3 offset-md-8 col-lg-2 offset-lg-9 col-sm-4 offset-sm-7 col-6 offset-4 row">
+          <div class="col-8">
+              <button class="btn btn-primary" >Guadar</button>
+            </div>
+        <div class="col-4">
           <button class="btn btn-danger">Cancelar</button>
         </div>
       </div>
+      {{muestraInicio}}
     </div><!--Form de registro-->
   </div><!--card-->
 </div>

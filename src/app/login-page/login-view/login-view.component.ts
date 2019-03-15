@@ -10,12 +10,21 @@ import { LoginService} from '../login.service'; // se importa el servicio login.
 export class LoginViewComponent implements OnInit {
   muestraLogin = true;
   muestraRegistro = false;
-  constructor() { }
+  muestraInicio: string[];
+  value = '';
+  constructor(private ServicioRegistro: LoginService) { // Se una variable privada para el componente, se le asigna el tipo LoginService
+
+  }
   showRegisterForm() {
     this.muestraLogin = false;
     this.muestraRegistro = true;
   }
+  muestraLista(value: string) {
+    this.value = value;
+    this.muestraInicio = this.ServicioRegistro.muestrameAlgo();
+  }
   ngOnInit() {
+
   }
 
 }

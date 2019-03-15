@@ -43,19 +43,19 @@ exports.paginaRegistro = function(req, res){
                   utilizando el metodo POST
                   POST SCHEMA:
                   {
-                      "Nombre Tienda": <string>
-                      "Email": <string>
-                      "Telefono": <int>
+                      "Nombre Tienda": <string> => AccountName
+                      "Email": <string> => email__c
+                      "Telefono": <int> => 
                       "Direccion": {
-                          "Calle": <string>
-                          "Referencia": <string>
-                          "Numero exterior": <int>
-                          "Numero interior": <int>
-                          "Colonia": <string>
-                          "Ciudad": <string>
-                          "Estado": <string>
-                          "CP": <int>
-                          "Pais": <int>
+                          "Calle": <string> => Calle__c
+                          "Referencia": <string> => Referencia__c
+                          "Numero exterior": <int> => NumeroExterior__c
+                          "Numero interior": <int> => NumeroInterior__c
+                          "Colonia": <string> => Colonia__c
+                          "Ciudad": <string> => Ciudad__c
+                          "Estado": <string> => Estado__c
+                          "CP": <int> => CP__c
+                          "Pais": <int> => Pais__C
                       }
                       "Direccion Facturacion": {
                           "fCalle":<string>
